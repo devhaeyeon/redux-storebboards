@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import { Player } from "./components/Player";
-import { AddPlayerForm } from "./components/AddPlayerForm";
+import AddPlayerForm from "./components/AddPlayerForm";
 import { connect } from "react-redux";
 
 class App extends React.Component {
@@ -33,12 +33,12 @@ class App extends React.Component {
     });
   };
 
-  handleAddPlayer = name => {
+  /*handleAddPlayer = name => {
     console.log(name);
     this.setState(prevState => ({
       players: [...prevState.players, { name, score: 0, id: ++this.maxId }]
     }));
-  };
+  };*/
   // shorthand property: key와 value가 같을 경우 하나만 사용
 
   render() {
