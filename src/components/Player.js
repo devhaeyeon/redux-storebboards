@@ -1,6 +1,6 @@
-import React from 'react';
-import {Counter} from "./Counter";
-import PropTypes from 'prop-types';
+import React from "react";
+import Counter from "./Counter";
+import PropTypes from "prop-types";
 
 export class Player extends React.Component {
   static propTypes = {
@@ -9,20 +9,21 @@ export class Player extends React.Component {
     id: PropTypes.number,
     name: PropTypes.string.isRequired,
     score: PropTypes.number
-  }
+  };
 
   render() {
-    console.log(this.props.name, ' redered');
-    const {removePlayer, id, name, score, changeScore} = this.props;
+    console.log(this.props.name, " redered");
+    const { removePlayer, id, name, score, changeScore } = this.props;
 
     return (
-      <div className='player'>
-    <span className='player-name'>
-      <button className='remove-player'
-              onClick={() => removePlayer(id)}>x</button>
-    </span>
-        <span className='player-name'>{name}</span>
-        <Counter score={score} id={id} changeScore={changeScore}/>
+      <div className="player">
+        <span className="player-name">
+          <button className="remove-player" onClick={() => removePlayer(id)}>
+            x
+          </button>
+        </span>
+        <span className="player-name">{name}</span>
+        <Counter score={score} id={id} changeScore={changeScore} />
       </div>
     );
   }
